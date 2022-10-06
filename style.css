@@ -4,6 +4,8 @@ body {
     margin: 0;
     box-sizing: border-box;
 }
+
+
 .header {
     display: flex;
     background-color: black;
@@ -13,7 +15,16 @@ body {
     justify-content: center;
     font-size: 3rem;
 }
+.content-container {
+    display: grid;
 
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    justify-items: center;
+}
 .book-card {
     display: flex;
     flex-direction: column;
@@ -21,3 +32,60 @@ body {
     height: 200px;
     border: 1px black solid;
 }
+
+.new-book-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border:1px black dotted;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+}
+
+
+/*form*/
+.form-popup {
+    /* display: none; */
+    position: fixed;
+    /* border: 3px solid #f1f1f1; */
+    /* z-index: 9; */
+  }
+
+  .form-container {
+    max-width: 200px;
+    max-height: 200px;
+    /* padding: 10px; */
+    background-color: white;
+    font-size: small;
+  }
+
+  /* Full-width input fields */
+.form-container input[type=text], .form-container input[type=number], .form-container input[type=date] {
+    /* width: 100%; */
+    /* padding: 15px; */
+    /* margin: 5px 0 22px 0; */
+    border: none;
+    background: #f1f1f1;
+  }
+
+  .form-container input[type=text], .form-container input[type=number], .form-container input[type=date]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+  .form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
