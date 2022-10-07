@@ -1,7 +1,9 @@
-
 body {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+}
+* {
     box-sizing: border-box;
 }
 
@@ -33,6 +35,7 @@ body {
     border: 1px black solid;
 }
 
+
 .new-book-card{
     display: flex;
     justify-content: center;
@@ -44,26 +47,25 @@ body {
     cursor: pointer;
 }
 
-
 /*form*/
+
 .form-popup {
-    /* display: none; */
+    display: none;
     position: fixed;
-    /* border: 3px solid #f1f1f1; */
+    border: 3px solid #f1f1f1;
     /* z-index: 9; */
   }
 
   .form-container {
     max-width: 200px;
     max-height: 200px;
-    /* padding: 10px; */
     background-color: white;
     font-size: small;
   }
 
   /* Full-width input fields */
 .form-container input[type=text], .form-container input[type=number], .form-container input[type=date] {
-    /* width: 100%; */
+    width: 100%;
     /* padding: 15px; */
     /* margin: 5px 0 22px 0; */
     border: none;
@@ -82,10 +84,20 @@ body {
     border: none;
     cursor: pointer;
     width: 100%;
-    margin-bottom:10px;
+    /* margin-bottom:10px; */
     opacity: 0.8;
   }
   
   .form-container .btn:hover, .open-button:hover {
     opacity: 1;
   }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+
+
