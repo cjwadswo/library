@@ -15,6 +15,9 @@
     <div class="content-container">
         <div class="add-book">+ Add Book</div>
         <div class="content">
+
+
+
             <div class="new-book-card open-button">
                 <div class="open-button"> + </div>
                 <div class="form-popup" id="myForm">
@@ -33,11 +36,22 @@
                           <label for="pages">Page numbers</label>
                           <input type="number" id="pages" placeholder="#" name="pages" required>
                       </div>
-                      <button type="button" id="submit-btn" class="btn">Add Book</button>
+
+                      <div class="read-field">
+                        <div class="switch-container">
+                            <div>Read</div>
+                            <label class="switch">
+                                <input class="read" type="checkbox">
+                                <span class="slider round"></span>
+                            </label>
+                        </div>
+                      </div>
+                      <button type="button" id="submit-btn" class="btn testBtn">Add Book</button>
                       <button type="button" class="btn cancel">Close</button>
                     </form>
                   </div>
             </div>
+            
         </div>
     </div>
 
