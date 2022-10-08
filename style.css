@@ -26,6 +26,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
     justify-items: center;
+    padding-top: 1rem;
 }
 .book-card {
     display: flex;

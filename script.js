@@ -10,9 +10,6 @@ let submitButton = document.querySelector("#submit-btn");
 submitButton.addEventListener('click', getNewEntry, true); 
 
 let toggleReadButton = document.querySelector('.read');
-toggleReadButton.addEventListener('click', e => {
-    console.log(e);
-}, true);
 
 // myLibrary.push(new Book("Game of Thrones", "George R. R. Martin", 694, false));
 // myLibrary.push(new Book("Game of Thrones", "George R. R. Martin", 694, true));
@@ -77,11 +74,9 @@ submitButton.addEventListener('click', getNewEntry, true);
 toggleReadButton = document.querySelectorAll('.read');
 toggleReadButton.forEach((btn)=>{
     btn.addEventListener('click', e => {
-        console.log(e.path[6]);
         if(e.path[6].className !== 'new-book-card open-button' ){
             let bookElement = e.path[3];
             let index = bookElement.getAttribute('data-book-number');
-            console.log(e.path[6].className);
             myLibrary[index].read = !myLibrary[index].read;
         }
        
@@ -120,7 +115,6 @@ function getNewEntry() {
     let author = document.getElementById("author").value;
     let pages = document.getElementById("pages").value;
     let read = document.querySelectorAll(".read");
-    console.log(read[read.length - 1].checked);
     read = read[read.length - 1].checked;
     myLibrary.push(new Book(title,author,pages,read));
     displayBooks(myLibrary);
