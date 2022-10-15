@@ -1,3 +1,11 @@
+class Book {
+    constructor(title,author,pages,read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
+}
 let myLibrary = [];
 
 let newBookButton = document.querySelector(".new-book-card");
@@ -10,19 +18,6 @@ let submitButton = document.querySelector("#submit-btn");
 submitButton.addEventListener('click', getNewEntry, true); 
 
 let toggleReadButton = document.querySelector('.read');
-
-// myLibrary.push(new Book("Game of Thrones", "George R. R. Martin", 694, false));
-// myLibrary.push(new Book("Game of Thrones", "George R. R. Martin", 694, true));
-// myLibrary.push(new Book("Game of Thrones", "George R. R. Martin", 694, true));
-// myLibrary.push(new Book("Game of Thrones", "George R. R. Martin", 694, false));
-// myLibrary.push(new Book("Game of Thrones", "George R. R. Martin", 694, true));
-
-function Book(title, author, pages, read) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-}
 
 function displayBooks(library) {
     const content = document.querySelector('.content');
@@ -119,5 +114,3 @@ function getNewEntry() {
     myLibrary.push(new Book(title,author,pages,read));
     displayBooks(myLibrary);
   }
-
-
